@@ -1016,15 +1016,12 @@ body {
 }
 .header__body {
   height: clamp(611px, -1.9232px + 59.8558vw, 860px);
+  position: relative;
 }
 .header__body-video {
   width: 100%;
   height: 100%;
   position: relative;
-}
-.header__body-video video {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 .header__body-inner {
@@ -2514,6 +2511,7 @@ body {
 }
 .reviews__swiper-wrapper {
   align-items: flex-start;
+  min-height: 583px;
 }
 .reviews__slide {
   display: flex;
@@ -2593,6 +2591,7 @@ body {
     max-width: 700px;
   }
   .reviews__swiper-wrapper {
+    min-height: 100%;
     margin-bottom: 32px;
   }
   .reviews__img {
