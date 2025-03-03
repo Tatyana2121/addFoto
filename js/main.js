@@ -4,11 +4,8 @@
   const body = document.body
   document.addEventListener('click', burgerInit)
   function burgerInit(e) {    
-    console.log(e.target);
     const burgerIcon = e.target.closest('.burger') //Метод, который возвращает ближайший родительский элемент или его самого
     const burgerNavLink = e.target.closest('.header__nav-link')
-    console.log(burgerNavLink);
-      //if (!burgerIcon && !burgerNavLink) return
     if (!burgerIcon && !burgerNavLink) return //если удовлетворяет условию, то дальше читаться не будет
     if (document.documentElement.clientWidth > 1000) return //измерение ширины окна  
     body.classList.toggle('body--opened-menu') 
@@ -165,7 +162,6 @@ slider.addEventListener('click', function (e) {
     });  
   }
   const activeSlideIndex = Array.from(slides).findIndex(slide => slide === e.target.parentNode);
-  // console.log(activeSlideIndex);
   const textSlider = openSliderWrap.querySelectorAll(".our-work__text");
   textSlider.forEach(text => {
     text.style.display = 'block';
@@ -242,13 +238,10 @@ openSliderWrap.addEventListener('click', function (e) {
   locationsSlides.forEach((value, index) => {
     value.addEventListener('click', () => {
       const currentIndex = index
-      console.log(currentIndex);
       // Определяем текущее количество видимых слайдов
-      const currentSlidesPerView = swiper1.params.slidesPerView;
-      
+      const currentSlidesPerView = swiper1.params.slidesPerView;      
       const locationSwiper = document.querySelector('.locations__swiper');
-      const locationButton = document.querySelector('.locations__button');
-      
+      const locationButton = document.querySelector('.locations__button');      
       // Изменяем количество видимых слайдов
       if (currentSlidesPerView > 1) {      
         swiper1.params.slidesPerView = 1; // Устанавливаем 1 видимый слайд
@@ -363,12 +356,10 @@ openSliderWrap.addEventListener('click', function (e) {
   //REVIEWS
   // const reviewsMore = document.querySelectorAll('.reviews__text')
   const reviewsBtn =  document.querySelectorAll('.reviews__btn-more')
-  // console.log(reviewsBtn);
   for(let value of reviewsBtn) {
     value.addEventListener('click', () => {
       const hiddenText = value.previousElementSibling;
       const block = value.parentNode;
-      // console.log(block);
       if (value.textContent === "Показать ещё") {
         value.textContent = "Скрыть"
         hiddenText.style.maxHeight = hiddenText.scrollHeight + "px"; // Устанавливаем max-height в высоту содержимого
