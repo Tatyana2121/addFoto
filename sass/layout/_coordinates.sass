@@ -1,0 +1,115 @@
+.coordinates 
+  &__box 
+    margin: 0px 120px 
+    height: 596px 
+    display: flex
+    position: relative
+  &__map 
+    width: 60%
+    border: 5px solid rgb(242, 244, 244)
+    border-radius: 25px
+    box-shadow: 0px 2.69px 6.65px 0px rgba(121, 121, 121, 0.2)
+    align-self: center
+  & iframe
+    border-radius: 25px
+    width: 100%
+    height: 541px
+    border-style: 0
+  &__form-inner
+    // display: none
+    max-width: 551px
+    padding: 67px 65px
+    border-radius: 25px
+    background: url(../images/coordinates-form-bg.svg) center / cover no-repeat
+    position: absolute
+    top: 0
+    right: 0
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__title 
+    font-size: 30px
+    margin-bottom: 32px
+    white-space: nowrap
+  &__label
+    margin-bottom: 16px
+    display: flex
+    flex-direction: column
+    width: 100%
+    color: $text-color-form-label
+    line-height: 1.333
+    &:last-of-type
+      margin-bottom: 36px
+  &__input
+    border: 1px solid  $text-color-form-border
+    border-radius: 5px    
+    padding: 15px 16px
+    margin-top: 8px
+    &::placeholder
+      color: $text-color-form-placeholder
+      font-size: 12px
+  &__btn
+    margin-bottom: 16px
+    max-width: 420px
+    width: 100%
+  &__check
+    font-size: 12px
+    line-height: 1.33
+    color: $text-color-form
+    text-shadow: 0px 4px 4px #00000040
+    text-align: center
+    margin: 0px -25px
+    a
+      color: $text-color-title
+      text-decoration: underline
+
+// [class*="map-widget-layout-view__bottom-layout"] 
+//   display: none !important
+@media (max-width: 1300px)
+  .coordinates 
+    &__box 
+      margin: 0px 80px 
+    &__form-inner
+      max-width: 482px
+      padding: 67px 54px
+@media (max-width: 900px)
+  .coordinates
+    &__box 
+      flex-direction: column
+      align-items: center
+      height: 1037px
+    &__map 
+      width: 100%
+    &__form-inner
+      top: auto
+      right: auto
+      bottom: 0
+@media (max-width: 700px)
+  .coordinates
+    &__box 
+      margin: 0px 16px 
+      height: 980px
+    &__form-inner
+      max-width: 95%
+    &__title 
+      font-size: 26px
+      margin-bottom: 24px
+@media (max-width: 500px)
+  .coordinates
+    &__form-inner
+      padding: 50px 20px
+    &__title 
+      font-size: 22px
+    &__label
+      font-size: 14px
+      margin-bottom: 12px
+      line-height: 1
+      &:last-of-type
+        margin-bottom: 30px
+    &__input
+      padding: 15px 16px
+    &__check
+      font-size: 12px
+      line-height: 1.33
+      margin: 0px 0px

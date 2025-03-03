@@ -1,0 +1,201 @@
+.costPhotoSession
+  background: url(../images/costPhotoSession.svg) 50% 0% / cover no-repeat
+  padding-bottom: clamp(60px, 38.8736px + 5.6338vw, 120px)
+  &__title
+    margin-bottom: 80px
+  &__wrapper 
+    padding: 0px 100px
+  &__cards
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 23px
+    width: 100%
+  &__card
+    padding: 48px 14px 42px
+    color: $text-color-title
+    border-radius: 16px
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+    overflow: hidden
+    width: 33.33333%
+  &__card-mini
+    background: url(../images/costPhotoSession-card.svg) 185% -37% / auto no-repeat
+    background-color: #F2F4F4        
+  &__name 
+    color: $text-color-main
+    font-size: 18px
+    font-weight: 600
+    line-height: 1.2  
+    margin: 0px 0px 16px 30px                             
+  &__price     
+    font-size: 36px
+    font-weight: 700
+    line-height: 1.2
+    margin: 0px 0px 4px 30px
+  &__locations
+    color: #838383
+    font-size: 14px
+    font-weight: 600
+    margin: 0px 0px 40px 30px
+  &__listServices
+    margin-left: 30px
+    margin-bottom: 33px
+    & li
+      margin: 0px 0px 19px 30px
+      position: relative
+      &::before
+        content: ""
+        background: url(../images/costPhotoSession-check-circle.svg) center / contain no-repeat
+        position: absolute
+        width: 20px
+        height: 20px
+        left: -30px
+      &:last-child
+        margin-bottom: 0    
+  &__addServices-name
+    text-align: center
+    font-weight: 600
+    margin-bottom: 12px
+  &__addServices-inner
+    margin-bottom: 50px
+    display: flex
+    justify-content: center
+    gap: 5px
+    flex-grow: 1
+    flex-basis: 0
+  &__addServices-block
+    font-size: 12px
+    font-weight: 500
+    line-height: 1.2
+    text-align: center
+    border: 1px solid #c2c2c2
+    border-radius: 5px
+    background: $text-color-white
+    padding: 3px 6px
+  &__btn
+    width: 100%
+  &__card-standart
+    background: url(../images/costPhotoSession-card.svg) 185% -37% / auto no-repeat
+    background-color: #F9F4EE    
+  &__card-maxi
+    background: url(../images/costPhotoSession-card.svg) 188% -31% / auto no-repeat
+    background-color: #F5D9C6
+@media (max-width: 1440px) 
+  .costPhotoSession
+    background: url(../images/costPhotoSession-1024.svg) 62% 0% / cover no-repeat
+    &__cards
+      flex-wrap: wrap
+    &__card
+      max-width: 420px
+      width: 100%
+@media (max-width: 1100px) 
+  .costPhotoSession
+    &__wrapper 
+      padding: 0px clamp(16px, -17.104px + 8.8276vw, 80px)
+    &__card
+      width: auto
+    &__addServices-inner
+      flex-wrap: wrap
+    &__addServices-block
+      width: 49%
+      &:last-child
+        width: 100%
+@media (max-width: 1000px)
+  .costPhotoSession
+    &__title 
+      margin-bottom: clamp(40px, 16px + 6.4vw, 80px)
+@media (max-width: 500px) 
+  .costPhotoSession
+    &__card
+      padding: 42px 35px
+    &__name 
+      margin: 0px 0px 8px 0px                             
+    &__price     
+      margin: 0px 0px 4px 0px
+    &__locations
+      margin: 0px 0px 40px 0px
+    &__listServices
+      margin-left: 0
+      & li
+        font-size: 14px
+    &__addServices-name
+        font-size: 14px        
+    &__addServices-inner
+      margin-bottom: 30px
+@media (max-width: 450px) 
+  .costPhotoSession
+    &__card-standart
+      background: url(../images/costPhotoSession-card.svg) 218% -37% / auto no-repeat
+      background-color: #F2F4F4
+    &__card-mini
+      background: url(../images/costPhotoSession-card.svg) 218% -37% / auto no-repeat
+      background-color: #F9F4EE
+    &__card-maxi
+      background: url(../images/costPhotoSession-card.svg) 228% -31% / auto no-repeat
+      background-color: #F5D9C6
+@media (max-width: 400px) 
+  .costPhotoSession
+    &__card-standart
+      background: url(../images/costPhotoSession-card.svg) 288% -37% / auto no-repeat
+      background-color: #F2F4F4
+    &__card-mini
+      background: url(../images/costPhotoSession-card.svg) 288% -37% / auto no-repeat
+      background-color: #F9F4EE
+    &__card-maxi
+      background: url(../images/costPhotoSession-card.svg) 288% -31% / auto no-repeat
+      background-color: #F5D9C6
+
+.costPhotoSession-popUp
+  display: none
+  position: fixed
+  max-width: 680px
+  padding: 42px 28px
+  margin: 0 auto
+  width: 100%
+  background-color: $text-color-white
+  border-radius: 16px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 8
+  &__title
+    margin-bottom: 32px
+  &__form
+    max-width: 420px
+    width: 100%
+    margin: 0 auto
+  &__label
+    width: 100%
+    color: $text-color-form-label
+    line-height: 1.33
+  &__input
+    border: 1px solid $text-color-form-border
+    border-radius: 5px
+    padding: 18px 16px
+    width: 100% 
+    margin: 8px 0px 32px 0px
+    &::placeholder
+      color: $text-color-form-placeholder
+      font-size: 12px
+      font-weight: 600
+      line-height: 1
+  &__btn 
+    width: 100%
+  &__close-icon
+    top: -56px
+    right: 0
+@media (max-width: 700px)
+  .costPhotoSession-popUp
+    width: 90.13%
+    &__title
+      margin-bottom: 16px
+    &__input
+      padding: 10px 7px 10px 12px
+      margin: 8px 0px 16px 0px
+      &::placeholder
+        font-weight: 400
+    &__close-icon
+      top: 9px
+      right: 9px
+.active
+  display: block

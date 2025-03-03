@@ -1,0 +1,84 @@
+.locations
+  background: url(../images/location/location-Line.svg) center / contain no-repeat
+  &__title
+    margin-bottom: 80px
+  &__swiper-box
+    position: relative
+  &__swiper
+    max-width: 86%
+    height: auto
+    margin-bottom: 60px
+  &__swiper-slide img
+    width: 100%
+    height: auto
+    object-fit: cover
+    border-radius: 15px
+  &__button
+    display: block
+    margin: 0 auto
+  &__swiper-button-prev
+    position: absolute
+    top: 45%
+    left: 4.5%
+  &__swiper-button-next
+    position: absolute
+    top: 45%
+    right: 4.5%
+  &__swiper-button-prev::after
+    transform: translateX(-3px)  
+  &__swiper-button-next::after
+    transform: translateX(3px)
+// .ourWorks__swiper-button-prev,
+// .ourWorks__swiper-button-next,
+.swiper-button-prev, .swiper-button-next
+  color: $accent-color
+  border: 1px solid  $text-color-white
+  border-radius: 35px
+  width: clamp(36px, 22.9712px + 3.4742vw, 73px)
+  height: clamp(36px, 22.9712px + 3.4742vw, 73px)
+  background: $text-color-white
+  box-shadow: 0px 2px 10px #00000026
+  font-weight: 600
+  z-index: 1
+  transition: $transition-global
+  &:hover
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12)
+  &:active
+    background: $accent-color
+    color: $text-color-white
+    border: 1px solid  $accent-color
+.swiper-button-next:after,
+.swiper-button-prev:after 
+  font-size: 40px
+  font-weight: 900
+.locations__swiper-button-prev::after
+  transform: translateX(-3px)  
+.locations__swiper-button-next::after
+  transform: translateX(3px)
+.fullscreen 
+  max-width: 771px /* Ширина на "полный экран" */
+  height: 811px /* Высота на "полный экран" */
+  margin: auto /* Центрируем слайдер с отступом */
+.fullscreen-btn
+  display: none
+@media (max-width: 1440px)
+  .locations
+    background: url(../images/location/location-Line.png) -6px 1px/100% 104% no-repeat
+@media (max-width: 1000px)
+  .locations
+    background: url(../images/location/location-Line.png) -85px 19px / 116% 100%  no-repeat
+    &__swiper
+      max-width: 84%
+    &__title 
+      margin-bottom: clamp(40px, 16px + 6.4vw, 80px)
+  .swiper-button-next:after,
+  .swiper-button-prev:after 
+    font-size: clamp(19px, 6.4px + 3.36vw, 40px)
+  .fullscreen 
+    height: 678px /* Высота на "полный экран" */
+@media (max-width: 700px)
+  .locations
+    &__swiper-button-prev
+      top: 50%
+    &__swiper-button-next
+      top: 50%

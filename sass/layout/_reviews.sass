@@ -1,0 +1,138 @@
+.reviews
+  &__title
+    margin-bottom: 80px 
+  &__swiper-box
+    position: relative
+  &__swiper-slider
+    max-width: 73.6111%    
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+  &__swiper-wrapper
+    align-items: flex-start
+    // min-height: 570px
+  &__slide 
+    display: flex
+    flex-direction: column
+    text-align: center
+    justify-content: flex-end
+    max-width: 340px
+    transition: $transition-global
+  &__img 
+    width: 100%
+    min-height: 244px
+    margin-bottom: 30px
+    position: relative
+    & svg
+      padding: 20px 0px 0px 0px
+  &__img-1, .reviews__img-4 
+    & svg      
+      filter: drop-shadow(11px -13px 0px  #F9F4EE)
+  &__img-2, .reviews__img-5   
+    & svg      
+      filter: drop-shadow(-6px -15px 0px #F2F4F4)
+  &__img-3, .reviews__img-6    
+    & svg      
+      filter: drop-shadow(-8px -9px 0px #FFE5C2)
+  &__name
+    color: $text-color-main
+    font-size: 24px
+    font-weight: 600
+    line-height: 1
+    margin-bottom: 14px
+  &__text
+    color: $text-color-title
+    line-height: 1.5
+    margin-bottom: 8px
+    max-height: 120px
+    overflow: hidden
+  &__more
+    max-height: 0
+    overflow: hidden
+    margin-bottom: 8px
+    transition: max-height 0.3s ease
+  &__btn-more
+    margin-bottom: 10px
+    &::after
+      content: none
+  &__swiper-button-prev
+    position: absolute
+    top: 330px
+    left: 6%
+  &__swiper-button-next
+    position: absolute
+    top: 330px
+    right: 6%
+  &__btn
+    margin: 0 auto
+    max-width: 342px
+    width: 100%
+    transform: translate(0, -45%)
+.reviews__slide.swiper-slide-next, .reviews__slide.swiper-slide-prev
+  margin-top: 105px
+@media (max-width: 1200px)
+  .reviews
+    &__swiper-slider
+      max-width: 700px
+    &__swiper-wrapper
+      // min-height: 465px
+      margin-bottom: 32px
+    &__img 
+      margin-bottom: 10px
+    &__swiper-button-prev
+      top: 230px
+      left: 13%
+    &__swiper-button-next
+      top: 230px
+      right: 13%
+    &__btn
+      transform: translate(0, 0)
+  .reviews__slide.swiper-slide-next, .reviews__slide.swiper-slide-prev
+    margin-top: 0
+@media (max-width: 1100px)
+  .reviews
+    &__swiper-button-prev
+      left: 9%
+    &__swiper-button-next
+      right: 9% 
+@media (max-width: 1000px)
+  .reviews
+    &__swiper-button-prev
+      left: 4%
+    &__swiper-button-next
+      right: 4% 
+@media (max-width: 1000px)
+  .reviews
+    &__title 
+      margin-bottom: clamp(40px, 16px + 6.4vw, 80px)
+@media (max-width: 800px)
+  .reviews
+    &__swiper-slider
+      // min-height: 460px
+      max-width: 340px
+    &__swiper-wrapper
+      margin-bottom: 24px
+    &__swiper-button-prev
+      left: 18%
+    &__swiper-button-next
+      right: 18% 
+@media (max-width: 600px)
+  .reviews
+    &__swiper-button-prev
+      left: 10%
+    &__swiper-button-next
+      right: 10% 
+@media (max-width: 450px)
+  .reviews
+    &__name
+      font-size: 18px
+      line-height: 1.33
+    &__text
+      font-size: 14px
+      line-height: 1.7
+    &__btn
+      max-width: 320px
+    &__swiper-button-prev
+      left: 3%
+    &__swiper-button-next
+      right: 3% 

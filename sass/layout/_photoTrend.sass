@@ -1,0 +1,45 @@
+.photoTrend
+  background-color: #F9F4EE
+  padding: 60px 0px 50px 0px
+  &__wrapper
+    padding: 0px 100px 
+  &__title
+    margin-bottom: 32px
+  &__text
+    color: $text-color-main
+    line-height: 1.625
+  &__paragraph
+    display: inline-block
+    margin-bottom: 40px
+  &__btn-wrap
+    display: flex
+    justify-content: end
+  &__more 
+    display: none
+.dotsHide
+  display: none
+.moreTextActive
+  display: inline-block
+.photoTrend__btn.btnActive::after
+  transform: rotate(180deg)
+@media (max-width: 1100px)
+  .photoTrend
+    &__wrapper    
+      padding: 0px clamp(16px, -17.104px + 8.8276vw, 80px)
+    &__paragraph
+      margin-bottom: 30px
+@media (max-width: 700px)
+  .photoTrend
+    padding: 50px 0px 36px 0px
+    &__wrapper 
+      margin: 0 auto
+    &__text 
+      font-size: 14px
+      font-weight: 500
+      line-height: 1.4
+      text-align: center
+      margin-bottom: 16px
+    &__paragraph
+      margin-bottom: 20px
+    &__btn-wrap
+      justify-content: center

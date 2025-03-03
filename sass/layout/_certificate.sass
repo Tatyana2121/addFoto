@@ -1,0 +1,175 @@
+.certificate
+  position: relative
+  &::after
+    content: ""
+    background: url(../images/certificate-bg.svg) 0% 0% / auto no-repeat
+    position: absolute
+    width: 100%
+    height: 100%
+    right: -50%
+    top: 43%
+    z-index: 0
+  &__title
+    margin-bottom: 80px
+  &__wrapper
+    padding: 0px 100px
+  &__inner
+    display: flex
+    align-items: center
+    gap: clamp(20px, -174.1184px + 17.6471vw, 80px)
+    padding: 38px clamp(50px, -176.4704px + 20.5882vw, 120px) 38px
+    background-color: #F2F4F4
+    border-radius: 16px
+    min-height: 623px
+    position: relative
+  &__column-left
+    width: 56%
+  &__column-right
+    position: absolute
+    right: 10%
+    z-index: 1
+  &__name
+    color: #c1c1c1
+    font-size: 14px
+    line-height: 1.2
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin-bottom: 8px
+  &__subtitle 
+    color: $text-color-main
+    font-size: clamp(36px, -2.824px + 3.5294vw, 48px)
+    font-weight: 600
+    letter-spacing: 1px
+    margin-bottom: 53px
+  &__list
+    color: $text-color-main
+    font-weight: 600
+    margin: 0px 0px 0px 32px
+    position: relative
+    & li
+      margin-bottom: 26px
+      &::before
+        content: ""
+        background: url(../images/certificate-icon.svg) bottom / contain no-repeat
+        position: absolute
+        width: 16px
+        height: 18px
+        left: -32px
+      &:last-child
+        margin-bottom: 0
+  &__image
+    max-width: 420px
+    margin-bottom: 10px
+    & img
+      width: 100%      
+  &__group
+    max-width: 342px
+  &__period 
+    color: $text-color-title
+    text-align: center
+    margin: 0px 0px 16px 0px
+  &__btn
+    width: 100%
+@media (max-width: 1300px)
+  .certificate
+    &::after
+      background: url(../images/certificate-bg-1024.svg) 0% 0% / 100% 99% no-repeat
+      right: -42%
+      top: 39%
+    &__wrapper
+      padding: 0px 80px
+    &__inner
+      padding-bottom: 70px
+    &__column-right
+      right: 7%
+    &__subtitle
+      margin-bottom: 40px
+@media (max-width: 1100px)
+  .certificate
+    &::after
+      right: -43%
+      top: 32%
+    &__image
+      max-width: 350px
+    &__period
+      font-size: 14px
+@media (max-width: 1000px)
+  .certificate
+    &::after
+      right: -47%
+      top: 32% 
+    &__title 
+      margin-bottom: clamp(40px, 16px + 6.4vw, 80px)   
+    &__wrapper
+      padding: 0px clamp(16px, -22.4px + 10.244vw, 80px)
+    &__inner
+      padding: 38px 20px 50px
+    &__column-right
+      right: 2%
+@media (max-width: 900px)
+  .certificate
+    &::after
+      background: url(../images/certificate-bg-1024.svg) 0% 0% / 100% 100% no-repeat
+      right: -26%
+      top: 39%
+    &__inner
+      flex-direction: column
+      padding: 40px 20px 50px
+      min-height: 820px
+    &__column-left
+      text-align: center
+      width: 100%
+    &__column-right
+      right: 0
+      bottom: 4%
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 100%
+    &__name
+      text-align: center
+    &__subtitle
+      text-align: center
+    &__list
+      margin: 0px 0px 0px 0px
+      & li
+        &::before
+          left: 50%
+          transform: translate(-50%, -125%)
+    &__image
+      max-width: 260px
+@media (max-width: 800px)
+  .certificate
+    &::after
+      top: 40%
+@media (max-width: 700px)
+  .certificate
+    &::after
+      background: url(../images/certificate-bg-1024.svg) 0% 0% / 140% 100% no-repeat
+      right: -10%
+      top: 37%
+    &__name
+      font-size: 12px
+    &__subtitle
+      font-size: 24px
+      margin-bottom: 40px
+    &__list
+      & li
+        margin-bottom: 35px
+        &:last-child
+          margin-bottom: 0
+    &__column-right
+      bottom: 7%
+@media (max-width: 500px)
+  .certificate
+    &::after
+      background: url(../images/certificate-bg-375.svg) 0% 0% / 184% 100% no-repeat
+      right: -7%
+      top: 38%
+
+    &__list
+      font-size: 14px
+      & li
+        margin-bottom: 32px
+      &:last-child
+        margin-bottom: 0

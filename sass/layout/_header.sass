@@ -1,0 +1,158 @@
+.header
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0px clamp(18px, -15.2432px + 8.8649vw, 100px)
+    gap: 20px
+    height: clamp(36px, 9.6px + 7.04vw, 80px)
+    width: 100%
+  &__logo
+    width: 113px
+    height: 36px
+    flex-shrink: 0
+    & img
+      width: 100%
+      height: 100%
+  &__nav-list 
+    display: flex
+    gap: clamp(24px, 2.4vw, 32px)
+  &__nav-item
+    font-size: clamp(12px, 1.16vw, 14px)
+    line-height: 1.42
+    flex-shrink: 0
+    transition: $transition-global
+    &:hover
+      color: $text-color-title
+    &:active
+      color: $accent-color
+  &__contacts
+    display: flex
+    justify-content: end
+    align-items: center
+    gap: 6px 24px
+  &__callback
+    background: transparent
+    text-transform: uppercase
+    font-weight: 600 
+    font-size: clamp(11px, 1vw, 12px)
+    line-height: clamp(13px, 1.25vw, 15px)
+    letter-spacing: 1px
+    color: $accent-color
+    border: 2px solid $accent-color
+    border-radius: 10px 
+    padding: 8px 24px 8px 24px
+    flex-shrink: 0
+    transition: $transition-global
+    &:hover
+      color: $text-color-white
+      background: $accent-color
+    &:active
+      transform: scale(.95)
+  &__callback-icon
+    display: none
+    background: transparent
+  &__col-number
+    font-size: 14px
+    font-weight: 600
+    line-height: 20px
+    flex-shrink: 0
+  &__body
+    height: clamp(611px, -1.9232px + 59.8558vw, 860px)
+  &__body-video 
+    width: 100%
+    height: 100%
+    position: relative
+    & video
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__body-inner
+    max-width: 791px
+    margin: 0px clamp(28px, -1.1888px + 7.7838vw, 100px)
+    padding: clamp(70px, -270.2px + 32.4vw, 151px) 0px
+    position: absolute
+    inset: 0
+    z-index: 1
+  &__body-title 
+    color: $text-color-header
+    font-size: clamp(48px, -1.725rem + 7.2vw, 66px)
+    font-weight: 700
+    line-height: 1.18
+    margin-bottom: 48px
+    & span
+      letter-spacing: 3px
+  &__body-subtitle 
+    color: $text-color-header
+    text-align: left
+    font-size: clamp(24px, -26.4px + 4.8vw, 36px)
+    margin-bottom: 24px
+  &__body-text
+    color: $text-color-header
+    font-size: 16px
+    font-weight: 500
+    line-height: 1.6
+    margin-bottom: 24px
+  &__body-button
+    padding: 22px 20px
+@media (max-width: 1300px)
+  .header 
+    &__contacts
+      flex-direction: column-reverse
+      align-items: end
+    &__callback
+      font-weight: 500
+    &__body-title 
+      margin-bottom: 32px  
+    &__body-subtitle 
+      margin-bottom: 15px
+      line-height: 1.4      
+@media (max-width: 1000px)
+  .header
+    &__nav 
+      position: fixed
+      inset: 0
+      z-index: 7
+      background-color: $bg-color-opened-menu
+      opacity: 0 //сначала проходит анимация
+      visibility: hidden //затем срабатывает это свойство
+      transition: $transition-global
+    &__nav-list
+      flex-direction: column
+      color: $text-color-white
+      align-items: end
+      padding: calc( clamp(36px, 9.6px + 7.04vw, 80px) +  16px) 16px 0px 0px
+    &__nav-item
+      font-size: 14px
+      font-weight: 600
+    &__contacts
+      flex-direction: row
+      align-items: center
+    &__body
+      height: clamp(375px, 468.6px + 14.24vw, 1000px)
+.body--opened-menu
+  overflow: hidden //scroll убираем
+.body--opened-menu   .header__nav
+  opacity: 1 
+  visibility: visible
+@media (max-width: 800px)
+  .header
+    &__logo
+      width: max(64px, 14vw)
+      height: max(20px, 4.5vw)
+    &__callback
+      display: none   
+    &__callback-icon
+      display: block
+    &__body-inner
+      padding: 181px 0px
+      text-align: center
+    &__body-title 
+      font-size: clamp(24px, -2.824px + 7.2vw, 48px)
+    &__body-subtitle 
+      display: none
+    &__body-text 
+      display: none
+    &__body-button 
+      padding: 18px 16px
+

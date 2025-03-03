@@ -1,0 +1,75 @@
+html
+  scroll-behavior: smooth
+  scroll-padding-top: 6vh
+body
+  font-family: "Montserrat", "Arial", sans-serif
+  font-weight: 500
+  line-height: 1.4
+  color: $text-color-main
+.wrapper
+  min-height: 100%
+  width: 100%
+  overflow: hidden
+  display: flex
+  flex-direction: column
+.body__header, .body__ourWorks, .body__locations, .body__studioDesign, 
+.body__services, .body__stagesWork, .body__fotostudio, .body__photoTrend, .body__certificate, .body__reviews, .body__coordinates
+  margin-bottom: clamp(60px, 38.8736px + 5.6338vw, 120px)
+.container
+  max-width: 1440px
+  margin: 0 auto
+  height: 100%
+.title 
+  color: $text-color-title  
+  font-size: clamp(30px, 16.3632px + 1.3636vw, 36px)
+  text-align: center
+  font-weight: 600
+  line-height: 1.2
+  // margin-bottom: 80px
+.button 
+  background: $button-gradient
+  color: $text-color-white
+  font-size: clamp(14px, 12.2353px + 0.4706vw, 16px)
+  font-weight: 600
+  line-height: 1.25
+  letter-spacing: 3px
+  text-transform: uppercase
+  border-radius: 10px
+  padding: 14px 20px
+  transition: $transition-global
+  backface-visibility: hidden
+  &:hover
+    background: $button-gradient-hover
+  &:active
+    transform: scale(.95)
+.button-more
+  color: $accent-color
+  font-weight: 600
+  line-height: 1.5
+  cursor: pointer
+  padding-right: 16px
+  background-color: transparent
+  position: relative 
+  &::after
+    content: ""
+    position: absolute
+    background: url("../images/fotostudio-arrow.svg") center/cover no-repeat
+    width: 21px
+    height: 10px
+    right: -16px
+    top: 5px
+    transition: $transition-global
+.overlay
+  display: none
+  position: fixed
+  inset: 0
+  background-color: $bg-color-opened-menu
+  z-index: 7
+.body--fixed
+  overflow-y: hidden
+.active
+  display: block
+@media (max-width: 1000px)
+  .title 
+    font-size: clamp(22px, 17.2px + 1.28vw, 30px)
+    // margin-bottom: clamp(40px, 16px + 6.4vw, 80px)
