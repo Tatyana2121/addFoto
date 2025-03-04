@@ -51,8 +51,6 @@
     e.preventDefault()
     feedbackForm.classList.remove('feedback-form--active')
     thanksForm.classList.add('active')
-    // activeFeedbackForm()
-    // activeThanksForm()
     })
   document.addEventListener("keydown", function (event) {
     if (event.key == "Escape" && body.classList.contains("body--fixed") && thanksForm.classList.contains('active') && overlay.classList.contains('active')) {
