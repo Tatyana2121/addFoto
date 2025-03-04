@@ -238,11 +238,9 @@ openSliderWrap.addEventListener('click', function (e) {
     value.addEventListener('click', () => {
       const currentIndex = index
       // Определяем текущее количество видимых слайдов
-      const currentSlidesPerView = swiper1.params.slidesPerView;
-      
+      const currentSlidesPerView = swiper1.params.slidesPerView;      
       const locationSwiper = document.querySelector('.locations__swiper');
-      const locationButton = document.querySelector('.locations__button');
-      
+      const locationButton = document.querySelector('.locations__button');      
       // Изменяем количество видимых слайдов
       if (currentSlidesPerView > 1) {      
         swiper1.params.slidesPerView = 1; // Устанавливаем 1 видимый слайд
